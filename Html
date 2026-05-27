@@ -29,5 +29,11 @@
             }
         }
     </script>
+window.addEventListener("message", (event) => {
+    if (event.data.type === "play") {
+        player.loadVideoById(event.data.videoId);
+        document.getElementById('title').innerText = "Reproduciendo...";
+    }
+});
 </body>
 </html>
